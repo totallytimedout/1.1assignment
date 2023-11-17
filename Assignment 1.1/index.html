@@ -1,0 +1,135 @@
+<!-- Caleb Hess  -->
+<!DOCTYPE html>
+<!-- english -->
+<html lang="en">
+
+<head>
+    <!-- character encoding -->
+    <meta charset="UTF-8">
+    <!-- establishing viewport dimensions -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tab title -->
+    <title>Index</title>
+    <!-- link to stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <style>
+        :root {
+            --primary: rgb(116, 51, 109);
+            --secondary: rgb(46, 8, 42);
+            --tertiary: rgba(20, 20, 42, 0.644);
+        }
+
+        html {
+            background-color: var(--secondary);
+        }
+
+        p {
+            /* primary is for text and borders */
+            color: var(--primary);
+            /* takes the elements box and positions it outside of flow */
+            position: absolute;
+
+            /* forces the width of the box created by the p tag to fill the width of its container */
+            width: 100%;
+            /* separates the p's from everything below it */
+            border-bottom: 3px solid var(--primary);
+            /* medium font */
+            font-size: medium;
+            /* slightly bolded */
+            font-weight: 700;
+            /* if the text turns into a paragraph the lines will be twice as spaced */
+            line-height: 2ch;
+            /* spread the letters a bit */
+            letter-spacing: 5%;
+        }
+
+        img {
+            /* adds a fun little tab like effect */
+            border-left: 3px var(--primary) groove;
+            /* half of the viewport width */
+            width: 50vw;
+            /* allows for the dimensions to stay the same */
+            height: auto;
+        }
+
+        /* used to group the button and the meme together */
+        div#meme-wrapper {
+            position: absolute;
+            margin: auto;
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 3px var(--primary) solid;
+            background-color: var(--tertiary);
+        }
+
+        /* used to toggle the meme visibility */
+        .noshow {
+            visibility: hidden;
+        }
+
+        button {
+            color: var(--primary);
+            background-color: var(--secondary);
+            border: 7px solid var(--tertiary);
+            transition-property: scale;
+            transition-duration: .5s;
+            font-size: calc(100%-5pt);
+        }
+
+        button:hover {
+            scale: 1.1;
+
+        }
+
+        .no-bullet {
+            marker: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav menu -->
+    <nav>
+        <ul class="no-bullet">
+            <li>
+                <!-- link to top of page -->
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <!-- link to boards.html -->
+                <a href="./boards.html">Degree Objectives</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- <p>this is a paragraph</p> -->
+    <!-- header tag -->
+    <!-- inline styling not to be used -->
+    <h1 style="color:cyan;">Welcome to my Page</h1>
+    <h6 style="background-color:gray;">authored by Caleb Hess</h6>
+
+
+    <button id="toggleMeme" type="button">click me</button>
+    <div id="meme-wrapper">
+        <P>
+            Here is a meme:
+            <br />
+            <img id="memeImage" src="./meme.jpg" alt="My first Day of work wasn't that bad!" />
+        </P>
+    </div>
+</body>
+<script>
+    setTimeout((a) => {
+        alert("this is an alert");
+    }, 1000);
+
+    document.getElementById("toggleMeme").addEventListener("click", toggleMeme);
+
+    function toggleMeme() {
+        let meme = document.getElementById("memeImage");
+        meme.toggleAttribute("hidden");
+    }
+</script>
+
+</html>
