@@ -19,72 +19,99 @@
             --tertiary: rgba(20, 20, 42, 0.644);
         }
 
-        html {
+        body {
             background-color: var(--secondary);
+            margin: none;
+            padding: 5%;
+            bottom: 0%;
+            top: 10%;
+            width: 80%;
+            position: absolute;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-align: center;
+            background-color: var(--tertiary);
+            color: var(--tertiary);
+            text-shadow: 1px 1px black;
+        }
+
+        #memewrapper {
+            position: absolute;
+            width: 50%;
+            margin: auto;
+            display: flex;
+            flex-basis: auto;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            text-justify: inter-word;
         }
 
         p {
-            /* primary is for text and borders */
-            color: var(--primary);
-            /* takes the elements box and positions it outside of flow */
-            position: absolute;
-
-            /* forces the width of the box created by the p tag to fill the width of its container */
-            width: 100%;
-            /* separates the p's from everything below it */
-            border-bottom: 3px solid var(--primary);
-            /* medium font */
-            font-size: medium;
-            /* slightly bolded */
-            font-weight: 700;
-            /* if the text turns into a paragraph the lines will be twice as spaced */
-            line-height: 2ch;
-            /* spread the letters a bit */
-            letter-spacing: 5%;
+            text-indent: -1ch;
+            cursor: none;
         }
 
-        img {
-            /* adds a fun little tab like effect */
-            border-left: 3px var(--primary) groove;
-            /* half of the viewport width */
-            width: 50vw;
-            /* allows for the dimensions to stay the same */
+        #memeImage {
+            padding: 2px;
+            margin-top: 2px;
+            width: 64px;
             height: auto;
-        }
-
-        /* used to group the button and the meme together */
-        div#meme-wrapper {
-            position: absolute;
-            margin: auto;
-            width: 100%;
-            height: auto;
-            display: block;
-            border: 3px var(--primary) solid;
-            background-color: var(--tertiary);
-        }
-
-        /* used to toggle the meme visibility */
-        .noshow {
-            visibility: hidden;
-        }
-
-        button {
-            color: var(--primary);
-            background-color: var(--secondary);
-            border: 7px solid var(--tertiary);
-            transition-property: scale;
+            border: 25px solid var(--tertiary);
+            transition-property: all;
             transition-duration: .5s;
-            font-size: calc(100%-5pt);
+        }
+
+        #memeImage:hover {
+            scale: 1.1;
+            cursor: zoom-in;
+        }
+
+        #memeImage.zoomed {
+            width: 600px;
+            height: auto;
+            cursor: zoom-out;
+            position: absolute;
+            z-index: 1;
+            margin: auto;
+        }
+
+        #memeImage.zoomed:hover {
+            scale: .9;
+            cursor: zoom-out;
+        }
+
+        nav {
+            background-color: darkgray;
+            border: 1px solid black;
+            color: black;
+            text-shadow: 1px 1px var(--primary);
+        }
+
+        nav>a {
+            color: black;
+        }
+
+        nav>a:visited {
+            color: var(--tertiary);
+        }
+
+        button#toggleMeme {
+            position: absolute;
+            left: 45%;
+            right: 45%;
+            width: auto;
+            height: 20px;
         }
 
         button:hover {
             scale: 1.1;
-
-        }
-
-        .no-bullet {
-            marker: none;
-
         }
     </style>
 </head>
@@ -110,8 +137,8 @@
     <h6 style="background-color:gray;">authored by Caleb Hess</h6>
 
 
-    <button id="toggleMeme" type="button">click me</button>
-    <div id="meme-wrapper">
+    <button id="toggleMeme" type="button">Magic?</button>
+    <div id="memewrapper">
         <P>
             Here is a meme:
             <br />
@@ -129,6 +156,12 @@
     function toggleMeme() {
         let meme = document.getElementById("memeImage");
         meme.toggleAttribute("hidden");
+    }
+
+    const memeimage = document.getElementById("memeImage");
+    memeimage.addEventListener("click", toggleZoom);
+    function toggleZoom() {
+        memeimage.classList.toggle("zoomed");
     }
 </script>
 
