@@ -1,168 +1,179 @@
-<!-- Caleb Hess  -->
+<!-- Caleb Hess -->
 <!DOCTYPE html>
 <!-- english -->
 <html lang="en">
-
-<head>
+  <head>
     <!-- character encoding -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <!-- establishing viewport dimensions -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- tab title -->
     <title>Index</title>
-    <!-- link to stylesheet -->
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <!-- author metatag -->
+    <meta name="Author" content="Caleb Hess" />
     <style>
-        :root {
-            --primary: rgb(116, 51, 109);
-            --secondary: rgb(46, 8, 42);
-            --tertiary: rgba(20, 20, 42, 0.644);
-        }
+      :root {
+        --primary: rgb(116, 51, 109);
+        --secondary: rgb(46, 8, 42);
+        --tertiary: rgba(20, 20, 42, 0.644);
+      }
 
-        body {
-            background-color: var(--secondary);
-            margin: none;
-            padding: 5%;
-            bottom: 0%;
-            top: 10%;
-            width: 80%;
-            position: absolute;
-        }
+      body {
+        background-color: var(--secondary);
+        margin: none;
+        padding: 5%;
+        bottom: 0%;
+        top: 10%;
+        width: 80%;
+        position: absolute;
+      }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            text-align: center;
-            background-color: var(--tertiary);
-            color: var(--tertiary);
-            text-shadow: 1px 1px black;
-        }
+      .hidden {
+        visibility: hidden;
+      }
 
-        #memewrapper {
-            position: absolute;
-            width: 50%;
-            margin: auto;
-            display: flex;
-            flex-basis: auto;
-            flex-direction: row;
-            align-content: center;
-            justify-content: center;
-            text-justify: inter-word;
-        }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-align: center;
+        background-color: var(--tertiary);
+        color: var(--tertiary);
+        text-shadow: 1px 1px black;
+      }
 
-        p {
-            text-indent: -1ch;
-            cursor: none;
-        }
+      #memewrapper {
+        position: absolute;
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-basis: auto;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        text-justify: inter-word;
+      }
 
-        #memeImage {
-            padding: 2px;
-            margin-top: 2px;
-            width: 64px;
-            height: auto;
-            border: 25px solid var(--tertiary);
-            transition-property: all;
-            transition-duration: .5s;
-        }
+      p {
+        text-indent: -1ch;
+        cursor: none;
+      }
 
-        #memeImage:hover {
-            scale: 1.1;
-            cursor: zoom-in;
-        }
+      #memeImage {
+        padding: 2px;
+        margin-top: 2px;
+        width: 64px;
+        height: auto;
+        border: 25px solid var(--tertiary);
+        transition-property: all;
+        transition-duration: 0.5s;
+      }
 
-        #memeImage.zoomed {
-            width: 600px;
-            height: auto;
-            cursor: zoom-out;
-            position: absolute;
-            z-index: 1;
-            margin: auto;
-        }
+      #memeImage:hover {
+        transform: scale(1.1);
+        cursor: zoom-in;
+      }
 
-        #memeImage.zoomed:hover {
-            scale: .9;
-            cursor: zoom-out;
-        }
+      #memeImage.zoomed {
+        width: 600px;
+        height: auto;
+        cursor: zoom-out;
+        position: absolute;
+        z-index: 1;
+        margin: auto;
+      }
 
-        nav {
-            background-color: darkgray;
-            border: 1px solid black;
-            color: black;
-            text-shadow: 1px 1px var(--primary);
-        }
+      #memeImage.zoomed:hover {
+        transform: scale(0.9);
+        cursor: zoom-out;
+      }
 
-        nav>a {
-            color: black;
-        }
+      /*the magic button*/
+      button#toggleMeme {
+        max-width: 25vw;
+        /*vw = viewport width*/
+        min-width: fit-content;
+        /* the buttons label should always be visible with this*/
+        background-color: var(--secondary);
+        border: 2px double var(--primary);
+      }
 
-        nav>a:visited {
-            color: var(--tertiary);
-        }
-
-        button#toggleMeme {
-            position: absolute;
-            left: 45%;
-            right: 45%;
-            width: auto;
-            height: 20px;
-        }
-
-        button:hover {
-            scale: 1.1;
-        }
+      /*makes the button change size by transformation of the scale when hovered*/
+      button:hover {
+        transform: scale(1.1);
+        border-color: yellow;
+        outline: green;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- nav menu -->
-    <nav>
-        <ul class="no-bullet">
-            <li>
-                <!-- link to top of page -->
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <!-- link to boards.html -->
-                <a href="./boards.html">Degree Objectives</a>
-            </li>
-        </ul>
+    <nav width="">
+      <ul class="no-bullet">
+        <li>
+          <!-- link to top of page -->
+          <a href="#" title="Home"> Home </a>
+        </li>
+        <li>
+          <!-- link to boards.html -->
+          <a href="./boards.html" title="Degree Objectives">
+            Degree Objectives
+          </a>
+        </li>
+      </ul>
     </nav>
     <!-- <p>this is a paragraph</p> -->
     <!-- header tag -->
     <!-- inline styling not to be used -->
-    <h1 style="color:cyan;">Welcome to my Page</h1>
-    <h6 style="background-color:gray;">authored by Caleb Hess</h6>
+    <h1 style="color: cyan">Welcome to my Page</h1>
+    <h6 style="background-color: gray">Authored by Caleb Hess</h6>
 
-
-    <button id="toggleMeme" type="button">Magic?</button>
+    <button id="toggleMeme" type="button" style="color: gold">Magic?</button>
     <div id="memewrapper">
-        <P>
-            Here is a meme:
-            <br />
-            <img id="memeImage" src="./meme.jpg" alt="My first Day of work wasn't that bad!" />
-        </P>
+      <p style="color: gold">
+        <span id="memeLabel" class="hidden">Here is a meme:</span>
+        <br />
+        <img
+          id="memeImage"
+          class="hidden"
+          src="./meme.jpg"
+          alt="My first Day of work wasn't that bad!"
+        />
+        <!-- Add a 'hidden' class to initially hide the image -->
+      </p>
     </div>
-</body>
-<script>
-    setTimeout((a) => {
-        alert("this is an alert");
-    }, 1000);
+  </body>
 
-    document.getElementById("toggleMeme").addEventListener("click", toggleMeme);
-
-    function toggleMeme() {
+  <script>
+    //immediately invoked anonymous function to encapsulate the internal functions from being access from the DOM model
+    (() => {
+      /*
+          setTimeout schedules the function to be called
+          */
+      setTimeout((a) => {
+        alert("Welcome! Please click the magic button!");
+      }, 1000);
+      //add the event listener to the picture for when it is clicked so that it can act like a button of sorts.
+      document
+        .getElementById("toggleMeme")
+        .addEventListener("click", toggleMeme);
+      //the event function to be fired when the button is clicked
+      function toggleMeme() {
         let meme = document.getElementById("memeImage");
-        meme.toggleAttribute("hidden");
-    }
+        let memeLabel = document.getElementById("memeLabel");
+        memeLabel.classList.toggle("hidden");
+        meme.classList.toggle("hidden");
+      }
 
-    const memeimage = document.getElementById("memeImage");
-    memeimage.addEventListener("click", toggleZoom);
-    function toggleZoom() {
+      const memeimage = document.getElementById("memeImage");
+      memeimage.addEventListener("click", toggleZoom);
+
+      function toggleZoom() {
         memeimage.classList.toggle("zoomed");
-    }
-</script>
-
+      }
+    })();
+  </script>
 </html>

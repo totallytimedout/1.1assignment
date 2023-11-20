@@ -1,152 +1,103 @@
+<!-- Caleb Hess  -->
 <!DOCTYPE html>
+<!-- english -->
 <html lang="en">
+  <head>
+    <!-- character encoding -->
+    <meta charset="UTF-8" />
+    <!-- establishing viewport dimensions -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tab title -->
     <title>Advancing Computer science</title>
-    <link rel="stylesheet" href="./style.css" />
+    <!-- author metatag -->
+    <meta name="Author" content="Caleb Hess" />
+
     <style>
-        :root {
-            --primary: rgb(116, 51, 109);
-            --secondary: rgb(46, 8, 42);
-            --tertiary: rgba(20, 20, 42, 0.644);
-        }
+      :root {
+        --primary: rgb(116, 51, 109);
+        --secondary: rgb(46, 8, 42);
+        --tertiary: rgba(20, 20, 42, 0.644);
+      }
 
-        html {
-            background-color: var(--secondary);
-        }
+      body {
+        background-color: var(--secondary);
+        margin: none;
+        padding: 5%;
+        bottom: 0%;
+        top: 10%;
+        width: 80%;
+        position: absolute;
+      }
 
-        p {
-            /* primary is for text and borders */
-            color: var(--primary);
-            /* takes the elements box and positions it outside of flow */
-            position: absolute;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-align: center;
+        background-color: var(--tertiary);
+        color: var(--tertiary);
+        text-shadow: 1px 1px gold;
+      }
 
-            /* forces the width of the box created by the p tag to fill the width of its container */
-            width: 100%;
-            /* separates the p's from everything below it */
-            border-bottom: 3px solid var(--primary);
-            /* medium font */
-            font-size: medium;
-            /* slightly bolded */
-            font-weight: 700;
-            /* if the text turns into a paragraph the lines will be twice as spaced */
-            line-height: 2ch;
-            /* spread the letters a bit */
-            letter-spacing: 5%;
-        }
-
-        img {
-            /* adds a fun little tab like effect */
-            border-left: 3px var(--primary) groove;
-            /* half of the viewport width */
-            width: 50vw;
-            /* allows for the dimensions to stay the same */
-            height: auto;
-        }
-
-        /* used to group the button and the meme together */
-        div#meme-wrapper {
-            position: absolute;
-            margin: auto;
-            width: 100%;
-            height: auto;
-            display: block;
-            border: 3px var(--primary) solid;
-            background-color: var(--tertiary);
-        }
-
-        /* used to toggle the meme visibility */
-        .noshow {
-            visibility: hidden;
-        }
-
-        button {
-            color: var(--primary);
-            background-color: var(--secondary);
-            border: 7px solid var(--tertiary);
-            transition-property: scale;
-            transition-duration: .5s;
-            font-size: calc(100%-5pt);
-        }
-
-        button:hover {
-            scale: 1.1;
-
-        }
-
-        .no-bullet {
-            marker: none;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: var(--primary);
-            text-shadow: 2 2 var(--tertiary);
-            outline: 2px var(--secondary);
-        }
+      ol * {
+        text-indent: -1ch;
+        cursor: none;
+        color: gold;
+        text-shadow: 1px 0px black;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- nav menu -->
     <nav>
-        <ul class="no-bullet">
-            <li>
-                <!-- link to top of page -->
-                <a href="./index.html">Home</a>
-            </li>
-            <li>
-                <!-- link to boards.html -->
-                <a href="#">Degree Objectives</a>
-            </li>
-        </ul>
+      <ul>
+        <li>
+          <!-- link to top of page -->
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+          <!-- link to boards.html -->
+          <a href="#">Degree Objectives</a>
+        </li>
+      </ul>
     </nav>
 
     <h2>Advancing Computer SCience</h2>
 
-    <h3> ADVANCING COMPUTER SCIENCE DEGREE OBJECTIVES</h3>
+    <h3>ADVANCING COMPUTER SCIENCE DEGREE OBJECTIVES</h3>
     <ol>
-        <!-- one -->
-        <li>
-            Follow a software development process to analyze a problem, and to design, build and test software
-            solutions.
-        <li>
-            <!-- two -->
-        </li>
-        Demonstrate software development skills using more than one programming language and development
-        environment.
-        </li>
-        <!-- three -->
-        <li>
-            Implement data driven solutions.
-        </li>
-        <!-- four -->
-        <li>
-            Design and implement software solutions for mobile devices or embedded systems or multiple platforms.
-        </li>
-        <!-- five -->
-        <li>
-            Document the planning and development of software applications using industry-standard tools,
-            techniques
-            and
-            processes.
-        </li>
-        <!-- six -->
-        <li>
-            Within software solutions describe, implement and analyze data structure techniques such as lists,
-            trees,
-            hash tables,
-            graphs, along with sorting and searching algorithms.
-        </li>
+      <!-- one -->
+      <li>
+        Follow a software development process to analyze a problem, and to
+        design, build and test software solutions.
+      </li>
+      <!-- two -->
+      <li>
+        Demonstrate software development skills using more than one programming
+        language and development environment.
+      </li>
+      <!-- three -->
+      <li>Implement data driven solutions.</li>
+      <!-- four -->
+      <li>
+        Design and implement software solutions for mobile devices or embedded
+        systems or multiple platforms.
+      </li>
+      <!-- five -->
+      <li>
+        Document the planning and development of software applications using
+        industry-standard tools, techniques and processes.
+      </li>
+      <!-- six -->
+      <li>
+        Within software solutions describe, implement and analyze data structure
+        techniques such as lists, trees, hash tables, graphs, along with sorting
+        and searching algorithms.
+      </li>
     </ol>
-
-
-</body>
-
+  </body>
 </html>
